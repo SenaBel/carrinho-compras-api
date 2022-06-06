@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
-import getProduct from '../../services/getProduct'
+import React, {useContext } from 'react'
+import { ProdContext } from '../../../context/prodContext/index'
 
-const ProductAdd = ({image, title, price, handleAddItemToProd}) => {
-    
+const ProductAdd = ({image, title, price}) => {
+   const { handleAddItemToProd } = useContext(ProdContext)
     return (
         <>
         <div className='card'>
