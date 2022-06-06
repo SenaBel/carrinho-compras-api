@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ProdContext } from '../../../context/prodContext/index'
 
-const NavBar = ({product, clearProd}) => {
+const NavBar = () => {
+  const { product, clearProd } = useContext(ProdContext)
+
   const totalPriceProd = product.reduce((acc, current) => acc + current.price, 0)
     return (
         <header>

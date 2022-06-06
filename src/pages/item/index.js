@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ProdContext } from '../../../context/prodContext/index'
 
-const Item = ({title, price, index, handleRemoveItemFromProd}) => {
+const Item = ({title, price, index}) => {
+   const { handleRemoveItemFromProd } = useContext(ProdContext)
     return (
         <li>
           <h2 className='list-title'>{title}</h2>
