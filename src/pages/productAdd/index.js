@@ -16,10 +16,3 @@ const ProductAdd = ({image, title, price}) => {
 }
 
 export default ProductAdd
-// {
-//     product && product.map((product) => (
-//         <div className="card">
-//             <h1>{product.title}</h1>
-//         </di>
-//     ))
-// }

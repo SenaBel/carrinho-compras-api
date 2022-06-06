@@ -4,6 +4,14 @@ import getProduct from '../../services/getProduct'
 
 const Products = ({}) => {
     const [product, setproduct] = useState([])
+    const [productPerPage, setProductPerPage] = useState(3)
+    const [currentPage, setCurrentPage] = useState(0)
+
+    const pages = Math.ceil(product.length / productPerPage)
+    const startIndex = currentPage * productPerPage
+    const endIndex = startIndex + productPerPage
+    const currentProduct = product.slice(startIndex, endIndex)
+
 
     useEffect(() => {
         let response
@@ -13,9 +21,11 @@ const Products = ({}) => {
       }, [])
 
     return (
+      <>
+       
         <main>
         <section className='products-section'>
-          {product && product.map((prod, index) => (
+          {currentProduct && currentProduct.map((prod, index) => (
              <ProductAdd 
              key={index}
              image={prod.image} 
@@ -26,6 +36,14 @@ const Products = ({}) => {
           )}
         </section>
       </main>
+
+        <div className='pages-number'>
+          {Array.from(Array(pages), (prod, i) => {
+            return <button className='b-page' value={i} onClick={(e)=> setCurrentPage(Number(e.target.value))} >{i+1}</button>
+          } )}
+        </div>
+       
+      </>
     )
 }
 
