@@ -1,0 +1,224 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    /* display: flex; */
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 15vh;
+
+    /* background:f #3e969d; */
+    background: #3e969d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+/* background: #3e969d; */
+color: white;
+max-width: 900px;
+width: 90%;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+button{
+    border: none;
+    padding: 0rem 2rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    background: #ef720e;
+    border-radius: .75rem;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+
+    outline: none;
+}
+button:hover{
+    color: #ef720e;
+    background: white;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: normal;
+}
+.logo-bold{
+    font-weight: bold;
+}
+.nav-bar-actions{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 50%;
+}
+.nav-bar-total{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.nav-bar-total-quantity{
+    font-size: 1.25rem;
+}
+.nav-bar-total-price{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.clean-btn{
+    max-width: 8rem;
+}
+
+main {
+    margin-top: 15vh;
+    width: 100%;
+    min-height: 60vh;
+    /* background: red; */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.products-section{
+    max-width: 900px;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    padding-bottom: 3rem;
+
+}
+
+
+.card{
+    background: white;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem 0;
+
+    border-radius: 0.0rem;
+    box-shadow: 10px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.card-logo{
+    width: 50%;
+    object-fit: cover;
+}
+.card-title{
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+footer {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+ul{
+    max-width: 900px;
+    width: 90%;
+
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ 
+}
+
+li{
+    box-shadow: -8px 4px 0px rgba(0, 0, 0 , 0.5);
+    background: white;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+
+    padding: 2rem;
+    border-radius: .75rem;
+}
+.remove-btn{
+    border: 3px solid #ef720e;
+    background: transparent;
+    color: #ef720e;
+    font-weight: bold;
+}
+.remove-btn:hover{
+    color: white;
+    background: #ef720e;
+}
+
+@media(max-width: 800px){
+    .products-section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 520px){
+    .products-section{
+        grid-template-columns: 1fr;
+    }
+    .nav-bar-total-quantity{
+        font-size: .5rem;
+    }
+    .nav-bar-total-price{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .logo{
+       font-size: 1rem; 
+    }
+    .nav-bar-actions{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        min-width: 65%;
+    }
+    .list-title{
+        font-size: 1rem;
+    }
+    .list-price{
+        font-size: 0.75rem;
+    }
+    .remove-btn{
+        font-size: 0.75rem;
+    }
+}
