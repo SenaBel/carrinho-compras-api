@@ -13,7 +13,7 @@ const Products = ({}) => {
     const currentProduct = product.slice(startIndex, endIndex)
 
 
-    useEffect(() => {
+   useEffect(() => {
         let response
         response = getProduct.getLisPokemons().then(res => {
           setproduct(res)
@@ -39,7 +39,11 @@ const Products = ({}) => {
 
         <div className='pages-number'>
           {Array.from(Array(pages), (prod, i) => {
-            return <button className='b-page' value={i} onClick={(e)=> setCurrentPage(Number(e.target.value))} >{i+1}</button>
+            return(
+             <button key={i} className='b-page' value={i} onClick={(e)=> setCurrentPage(Number(e.target.value))}>
+              {i+1}
+            </button>
+            )
           } )}
         </div>
        

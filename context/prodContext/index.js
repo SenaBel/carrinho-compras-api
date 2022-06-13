@@ -1,14 +1,14 @@
 import {createContext, useState} from 'react'
 
+
 export const ProdContext = createContext({})
 
 export const ProdProvider = ({ children }) => {
     const [product, setproduct] = useState([])
-
     function handleAddItemToProd(image, title, price){
-        const itemObj = {image, title, price}
-        setproduct([...product, itemObj])
-      }
+      const itemObj = {image, title, price}
+      setproduct([...product, itemObj])
+    }
      
       function handleRemoveItemFromProd(clickedProdIndex){
         const filteredProd = product.filter(
