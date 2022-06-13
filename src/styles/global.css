@@ -237,4 +237,12 @@ li{
     .remove-btn{
         font-size: 0.75rem;
     }
+    .pages-number{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .b-page{
+        margin-bottom: 5px;
+    }
 }
